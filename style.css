@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?família=Oswald:wght@200; 500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?família=Lato:wght@100; 300; 400&display=swap');
+
+:root{ /*guarda as variaveis*/
+    --fon1: 'Georgia', Times, serif; /*usar em texto mais serios*/
+    --fon2: 'Roboto', sans-serif; /*usar em texto mais serios*/
+    --font3: 'Oswald', sans-serif; /*usar na tela de cadrastro*/
+    --font: 'Lato', sans-serif; /*usar em texto menos serios*/
+
+/*primeira paleta*/
+    --Azul: #000FF1;
+    --Marrom: #B45131;
+    --Amarelo: #FFF001;
+    --Verde: #008001;
+    --Rosa: #FFC0CB;
+/*segunda paleta*/
+    --Branco: #FFFFF1;
+    --Preto: #000001;
+    --Rosa-forte: #ff8486;
+    --Bege: #F5F5DC;
+/*terceira paleta*/
+    --Cinza-Claro: #D3D3D3;
+    --Cinza-Médio: #808080;
+    --Cinza-Escuro: #696969;
+    --Preto-claro: #333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; /*para que o site se ajuste para diferentes resoluções*/
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%; 
+}
