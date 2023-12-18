@@ -343,3 +343,104 @@ body{
       transform: translateY(-15px);
     }
 }
+/*----------------------------*/
+
+/* Estilo para a sobreposição */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fffffff6;
+    z-index: 9999;
+    border-radius: 2px;
+}
+/* Estilo para o conteúdo da sobreposição */
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+/* Estilo para o corpo quando a sobreposição está ativa */
+body.overlay-active {
+    overflow: hidden;
+}
+
+#close-icon{
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    top: -10%;
+    left: -8%;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: auto;
+    background-color: rgba(4, 4, 188, 0.534);
+    padding: 10%;
+    border-radius: 5px;
+}
+
+.img-titulo{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    font-size: 1.8em;
+    color: #ffffffe1;
+    font-family: var(--font4);
+    font-weight: normal;
+    background-color: #33333375;
+    padding: 14px;
+    border-radius: 5px;
+}
+
+input, select, button { /*inf geral*/
+    margin-bottom: 12px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    position: relative;
+    top: 10px;
+}
+
+button{
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: .1s ease all;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0 0 6px rgba(47, 47, 47, 0.162);
+    background-color: #33333375;
+    color: var(--Branco);
+}
+
+#orientacao {
+    display: none;
+    font-size: 0.8em;
+    color: white;
+    text-align: center;
+    background-color: #33333375;
+    padding: 3px;
+    border-radius: 2px;
+}
+
+/*--------------media screeen---------------*/
