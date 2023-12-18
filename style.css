@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?família=Lato:wght@100; 300; 400&display=swap');
 
 :root{ /*guarda as variaveis*/
-    --fon1: 'Georgia', Times, serif; /*usar em texto mais serios*/
-    --fon2: 'Roboto', sans-serif; /*usar em texto mais serios*/
+    --font1: 'Georgia', Times, serif; /*usar em texto mais serios*/
+    --font2: 'Roboto', sans-serif; /*usar em texto mais serios*/
     --font3: 'Oswald', sans-serif; /*usar na tela de cadrastro*/
-    --font: 'Lato', sans-serif; /*usar em texto menos serios*/
+    --font4: 'Lato', sans-serif; /*usar em texto menos serios*/
 
 /*primeira paleta*/
     --Azul: #000FF1;
@@ -35,10 +35,311 @@
 }
 
 html{
-    font-size: 62.5%; /*para que o site se ajuste para diferentes resoluções*/
     scroll-behavior: smooth;
 }
 
 body{
-    width: 100%; 
+    width: 100%;
+    height: 100vh; 
+    position: relative;
+    background-color: var(--Branco);
+}
+
+.tela-cadastro{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.cabecalho-inicial{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho-inicial img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.158));
+    margin-top: -50px;
+    margin-left: -40px;
+}
+
+.links-inicial{
+    display: flex;
+    gap: 30px;
+    font-size: 22px;
+    color: var(--Preto);
+    margin-top: -50px;
+    margin-right: 40px;
+}
+
+.links-inicial p a{
+    text-decoration: none;
+    color: var(--Preto);
+    font-weight: normal;
+    font-family: var(--font3);
+}
+
+.links-inicial p a:hover{
+    transition: all 0.1s ease-out;
+    color: var(--Azul);
+    text-decoration: none;
+    font-size: 23px;
+}
+
+#cadrastro-inicial{
+    margin-right: 100px;
+    background-color: var(--Azul);
+    color: var(--Branco);
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.196);
+}
+/*----------------------------------*/
+
+.conteudo-inicial{
+    width: 60%;
+    height: auto;
+    text-align: center;
+    margin: 60px auto 0 auto;
+}
+
+.conteudo-inicial h1{
+    margin-bottom: 20px;
+    font-family: var(--font3);
+    font-size: 35px;
+    color: var(--Preto-claro);
+}
+
+.conteudo-inicial p{
+    line-height: 24px;
+    font-size: 18px;
+    text-align: center;
+    text-indent: 10px;
+    color: var(--Preto-claro);
+    font-weight: normal;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dois-cadrastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+    margin-top: 50px;
+}
+
+.dois-cadrastro p a{
+    font-size: 22px;
+    font-family: var(--font3);
+    text-decoration: none;
+    color: black;
+    transition: .2s ease all;
+}
+
+.dois-cadrastro p a:hover{
+    background-color: var(--Preto-claro);
+    padding: 12px 24px;
+    color: white;
+    border-radius: 30px;
+    border: 2px solid var(--Bege);
+}
+
+/*--------------------------*/
+
+.rodape-inicial{
+    width: 100%;
+    background-color: var(--Azul);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.rodape-inicial p{
+    font-family: var(--font3);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    color: var(--Branco);
+}
+
+.piscar{ /*barra piscante - geral*/
+    width: 15px;
+    height: 100px;
+    border: 1px solid var(--Preto-claro);
+    border-radius: 2px;
+    background-color: var(--Branco);
+    z-index: 2;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.231)
+}
+#piscar01{ /*impar barra menor, esquerdo*/
+   position: absolute;
+   top: -2px;
+   left: 5px;
+   animation: piscar01 1s linear infinite;
+   border: none;
+   height: 20px;
+}
+#piscar02{ /*par barra maior, esquerdo*/
+   position: absolute;
+   top: -2px;
+   left: 30px;
+   animation: piscar01 1s linear infinite;
+   border: none;
+   height: 30px;
+}
+#piscar03{ /*impar barra menor, esquerdo*/
+   position: absolute;
+   top: -2px;
+   left: 55px;
+   border: none;
+   height: 20px;
+}
+#piscar04{ /*par barra maior, esquerdo*/
+   position: absolute;
+   top: -2px;
+   left: 80px;
+   border: none;
+   height: 30px;
+}
+
+#piscar05{ /*impar barra menor, direito*/
+    position: absolute;
+    top: -2px;
+    right: 5px;
+    border: none;
+    height: 20px;
+ }
+ #piscar06{ /*par barra maior, direito*/
+    position: absolute;
+    top: -2px;
+    right: 30px;
+    border: none;
+    height: 30px;
+ }
+ #piscar07{ /*impar barra menor, direito*/
+    position: absolute;
+    top: -2px;
+    right: 55px;
+    border: none;
+    height: 20px;
+ }
+ #piscar08{ /*par barra maior, direito*/
+    position: absolute;
+    top: -2px;
+    right: 80px;
+    border: none;
+    height: 30px;
+ }
+/*-------------------------------*/
+#piscar09{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: 7.5px;
+    border: none;
+    background-color: var(--Amarelo);
+    animation: pingar 2s infinite;
+}
+#piscar10{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 32.5px;
+    border: none;
+    background-color: var(--Amarelo);
+    animation: pingar 2s infinite;
+}
+#piscar11{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: 57.5px;
+    border: none;
+    background-color: var(--Amarelo);
+    animation: pingar 2s infinite;
+}
+#piscar12{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 82.5px;
+    border: none;
+    background-color: var(--Amarelo);
+    animation: pingar 2s infinite;
+}
+#piscar13{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    right: 7.5px;
+    border: none;
+    background-color: var(--Amarelo);
+    animation: pingar 2s infinite;
+}
+#piscar14{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 32.5px;
+    border: none;
+    background-color: var(--Amarelo);
+    animation: pingar 2s infinite;
+}
+#piscar15{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    right: 57.5px;
+    border: none;
+    background-color: var(--Amarelo);
+    animation: pingar 2s infinite;
+}
+#piscar16{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 82.5px;
+    border: none;
+    background-color: var(--Amarelo);
+    animation: pingar 2s 2s infinite;
+}
+
+@keyframes pingar {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
 }
