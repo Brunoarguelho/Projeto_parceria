@@ -3,11 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevParceiro-Brasil</title>
+    <title>DevParceiro-Brasil / Cont</title>
     <link rel="stylesheet" href="style03.css">
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+    <!-- 
+Informações de Contato: Inclua detalhes como endereço de e-mail, número de telefone, endereço físico (se aplicável), e horário de funcionamento.
+
+Formulário de Contato: Um formulário de contato permite que os visitantes enviem mensagens diretamente do site. Certifique-se de solicitar as informações necessárias, como nome, e-mail, assunto e a mensagem.
+
+Mídias Sociais: Links para perfis de mídias sociais podem ajudar a aumentar o engajamento. Inclua ícones de redes sociais como LinkedIn, Twitter, Facebook, Instagram, etc.
+
+Mapa: Se a sua empresa tem uma localização física que os clientes podem visitar, considere incorporar um mapa ao site.
+
+FAQs: Uma seção de Perguntas Frequentes (FAQs) pode ajudar a responder às perguntas comuns dos visitantes, economizando tempo tanto para você quanto para eles.
+
+Newsletter: Ofereça aos visitantes a opção de se inscreverem em uma newsletter para receber atualizações regulares.
+     -->
 <body>
-    
+    <header class="cabecalho">
+        <h1>Contato</h1>
+    </header>
+    <main>
+       <section>
+           <form id="contactForm">
+             <label for="nome">Nome: *</label><br/>
+             <input id="nome" type="text" required /><br/><br/>
+             <label for="email">E-mail: *</label><br/>
+             <input id="email" type="email" required /><br/><br/>
+             <label for="assunto">Assunto: *</label><br/>
+             <select id="assunto" required >
+               <option value="" disabled selected hidden></option>
+               <option value="Sou um Parceiro">Sou um Parceiro</option>
+               <option value="Sou um Desenvolvedor">Sou um Desenvolvedor</option>
+               <option value="Dúvidas e Sugestões">Dúvidas e Sugestões</option>
+             </select>
+             <br/><br/>
+             <textarea placeholder="Mensagem:" name="mensagem"></textarea><br/><br/>
+             <small>*Campos obrigatórios.</small><br/><br/>
+             <input id="button" type="submit" value="Enviar"/>
+           </form>
+       </section>
+       <section>
+        <div class="redes">
+            <div class="tooltip">
+                <ion-icon name="logo-linkedin" class="icon" id="linke"></ion-icon>
+                <span class="tooltiptext">LinkedIn</span>
+            </div>
+            <div class="tooltip">
+                <ion-icon name="logo-facebook" class="icon" id="face"></ion-icon>
+                <span class="tooltiptext">Facebook</span>
+            </div>
+            <div class="tooltip">
+                <ion-icon name="logo-instagram" class="icon" id="insta"></ion-icon>
+                <span class="tooltiptext">Instagram</span>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer class="rodape">
+        <p>&copy; 2024 -<strong> DevParceria Brasil</strong> | Todos os direitos reservados</p>
+    </footer>
 </body>
+<script>
+    //Validação do formulário
+    document.getElementById("contactForm").addEventListener('submit', function(event){
+        var nome = document.getElementById('nome').value;
+        var email = document.getElementById('email').value;
+        var mensagem = document.querySelector('[name=mensagem]').value;
+
+        if (nome === "" || email === "" || mensagem === ""){
+            alert('Preencha todos os campos!');
+            event.preventDefault();
+        }
+        else {
+            enviarEmail(nome, email, mensagem);
+        }
+});
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Mensagem enviada');
+});  //informa na tela que msg enviada
+   
+</script>
 </html>
