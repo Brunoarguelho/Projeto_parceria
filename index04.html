@@ -19,46 +19,36 @@
             <h1>Depende de você!</h1>
             <p>Transformando Códigos em Oportunidades, Conectando Talentos ao Futuro.</p>
             <img src="imagens/logo-entre04.jpg" alt="DevParceriaBrasil">
-            <div class="star">
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-            </div>
         </section>
+
         <section class="entre">
-            <h2>Venha fazer paste dessa comunidade!</h2>
-            <div class="date">
-                <ion-icon name="calendar-outline"></ion-icon>
+            <img src="imagens/logo01-sf.png" alt="DevParceriaBrasil">
+            <h2>Venha fazer parte dessa comunidade!</h2>
+            <div class="data">
+               
             </div>
-            <a href="#">
-                <p>Ainda não se Cadastrou</p>
-            </a>
+            <div class="link-cadastro">
+                <a href="#"><p>Ainda não se Cadastrou</p></a>
+            </div>
             <div class="linhacurta">
                 <hr> OU <hr>
             </div>
             <form action="" method="post">
-                <label for="email">E-mail:</label><br>
-                <input type="text" id="email" name="email"><br>
-                <span><ion-icon name="mail-outline"></ion-icon></span>
-                <label for="text">Senha:</label><br>
-                <input type="password" id="senha" name="senha"><br>
-                <span><ion-icon name="eye-off-outline"></ion-icon></span>
-                <span><ion-icon name="eye-outline"></ion-icon></span>
-                <span>Esqueci minha senha</span><br>
+                <label for="email">Email</label><br>
+                <input type="text" id="email" name="email" required><br>
+                <span id="email-icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <label for="text">Senha</label><br>
+                <input type="password" id="senha" name="senha" required><br>
+                <span id="senha-icon1"><ion-icon name="eye-off-outline"></ion-icon></span>
+                <span id="senha-icon2"><ion-icon name="eye-outline"></ion-icon></span>
+                <span id="senha-recupera"><a href="#">Esqueci minha senha</a></span><br>
                 <div class="recaptcha">
-                    <!-- Aqui vai o captcha do Google -->
+                    <p>captchar</p>
                    <div class="click-cap">
-                     
+                       <!-- area de click -->
                    </div>
                 </div>
-                <button onclick="validar()" >Entrar</button>
+                <button onclick="validar()" id="enviar">Entrar</button>
             </form>
             <div class="duvida">
                 <p>Não é um programador(a) ou empresa?</p>
@@ -71,6 +61,21 @@
     </main>
 </body>
 <script>
- 
+        function obterDataFormatada(data) {
+            const diasDaSemana = ["domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"];
+            const diaDaSemana = diasDaSemana[data.getDay()];
+            const meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+            const nomeDoMes = meses[data.getMonth()];
+            const diaDoMes = data.getDate();
+            const ano = data.getFullYear();
+            return `${diaDaSemana}, ${diaDoMes} de ${nomeDoMes} de ${ano}`;
+        }
+
+        // Criando uma data com os componentes específicos
+        const dataAtual = new Date(2023, 11, 20); // O mês é zero-indexado (0 = janeiro, 11 = dezembro)
+
+        // Exibindo a data na div
+        const divData = document.querySelector(".data");
+        divData.textContent = obterDataFormatada(dataAtual);
 </script>
 </html>
