@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DPB / Cadastro</title>
-    <link rel="stylesheet" href="style01.css">
-    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
-</head>
-<!-- 
-   tela de cadastro
- -->
-<body>
-    <header>
-        <h1>Cadastro</h1>
-    </header>
-    <main>
-            <form id="registrationForm">
-                <input type="text" id="name" placeholder="Nome Completo" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="text" id="cpfCnpj" placeholder="CPF ou CNPJ" required>
-                <input type="password" id="password" placeholder="Crie sua Senha" required>
-                <small id="orientacao">
-                    Sua senha deve ter pelo menos 8 caracteres, incluir uma letra maiúscula, uma letra minúscula, um número e um caractere especial (por exemplo, !@#$%^&*).
-                </small>
-                <select id="role" required>
-                    <option value="">Selecione uma opção</option>
-                    <option value="parceiro">Parceiro</option>
-                    <option value="desenvolvedor">Desenvolvedor</option>
-                </select>
-                <button type="submit">Cadastrar</button>
-            </form>
-    </main>
-    <footer>
-        <p>&copy; 2024 -<strong> DevParceria Brasil</strong> | Todos os direitos reservados</p>
-    </footer>
-</body>
-<script>
-    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
@@ -79,5 +41,3 @@
         event.preventDefault();  // Impede o envio do formulário
     }
 });
-</script>
-</html>
