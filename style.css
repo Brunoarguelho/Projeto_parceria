@@ -76,6 +76,7 @@ body{
     color: var(--Preto);
     margin-top: -50px;
     margin-right: 40px;
+    /* esconder no media screen 704px */
 }
 
 .links-inicial p a{
@@ -83,6 +84,7 @@ body{
     color: var(--Preto);
     font-weight: normal;
     font-family: var(--font3);
+    width: 100%;
 }
 
 .links-inicial p a:hover{
@@ -100,13 +102,76 @@ body{
     border-radius: 30px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.196);
 }
+
+.menu-lateral{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 80%;
+    height: 100vh;
+    overflow: hidden;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    background-color: #002afff5;
+}
+
+#fechar{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2em;
+    color: var(--Branco);
+    cursor: pointer;
+}
+
+#fechar:hover{
+    transform: rotate(180deg);
+    transition: all 0.3s ease-out;
+    filter: brightness(90%);
+}
+
+#abrir{
+    color: var(--Preto-claro);
+    font-size: 2.2em;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+#abrir:hover{
+    filter: brightness(50%);
+}
+
+.centro-lateral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+    height: calc(65vh - 20px);
+    font-size: 28px;
+    font-family: var(--font3);
+}
+
+.conf-lateral{
+    text-decoration: none;
+    color: var(--Branco);
+}
+
+.conf-lateral:hover{
+    color: azure;
+}
+
 /*----------------------------------*/
 
 .conteudo-inicial{
     width: 60%;
     height: auto;
     text-align: center;
-    margin: 60px auto 0 auto;
+    margin: 0 auto;
 }
 
 .conteudo-inicial h1{
@@ -117,6 +182,7 @@ body{
 }
 
 .conteudo-inicial p{
+    width: 100%;
     line-height: 24px;
     font-size: 18px;
     text-align: center;
@@ -130,7 +196,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 110px;
     margin-top: 50px;
 }
 
@@ -170,108 +235,141 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9;
     color: var(--Branco);
-}
-
-/*----------------------------*/
-
-/* Estilo para a sobreposição */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fffffff6;
-    z-index: 9999;
-    border-radius: 2px;
-}
-/* Estilo para o conteúdo da sobreposição */
-.overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
-}
-/* Estilo para o corpo quando a sobreposição está ativa */
-body.overlay-active {
-    overflow: hidden;
-}
-
-#close-icon{
-    font-size: 2em;
-    font-weight: bold;
-    position: absolute;
-    top: -10%;
-    left: -8%;
-    cursor: pointer;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    width: 800px;
-    margin: auto;
-    background-color: rgba(4, 4, 188, 0.534);
-    padding: 10%;
-    border-radius: 5px;
-}
-
-.img-titulo{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    font-size: 1.8em;
-    color: #ffffffe1;
-    font-family: var(--font4);
-    font-weight: normal;
-    background-color: #33333375;
-    padding: 14px;
-    border-radius: 5px;
-}
-
-input, select, button { /*inf geral*/
-    margin-bottom: 12px;
-    padding: 15px;
-    border: none;
-    outline: none;
-    border-radius: 2px;
-    position: relative;
-    top: 10px;
-}
-
-button{
-    width: 100px;
-    margin: 0 auto;
-    border-radius: 10px;
-    margin-top: 20px;
-    font-weight: bold;
-    transition: .1s ease all;
-    cursor: pointer;
-}
-
-button:hover{
-    box-shadow: 0 0 6px rgba(47, 47, 47, 0.162);
-    background-color: #33333375;
-    color: var(--Branco);
-}
-
-#orientacao {
-    display: none;
-    font-size: 0.8em;
-    color: white;
-    text-align: center;
-    background-color: #33333375;
-    padding: 3px;
-    border-radius: 2px;
 }
 
 /*--------------media screeen---------------*/
+
+@media screen and (max-width: 860px) { /*tablet */
+    .cabecalho-inicial img{
+        width: 240px;
+        height: 240px;
+    }
+
+    .links-inicial{
+        font-size: 20px;
+    }
+
+    .links-inicial p a:hover{
+        font-size: 21px;
+    }
+
+    #cadrastro-inicial{
+        margin-right: 10px;
+        padding: 12px;
+    }
+    /*---------------*/
+    .conteudo-inicial{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .conteudo-inicial h1{
+        font-size: 28px;
+    }
+
+    .conteudo-inicial p{
+        line-height: 22px;
+        width: 100%;
+    }
+
+    .dois-cadrastro{
+        gap: 50px;
+    }
+    /*---------------*/
+    .rodape-inicial{
+        height: 80px;
+    }
+
+    .rodape-inicial p{
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #close-icon{
+        left: -6%;
+    }
+
+    form {
+        width: 700px;
+        padding: 12%;
+    }
+}
+
+@media screen and (max-width: 704px) { /*tablet menor com menu lateral*/
+    .links-inicial{
+        display: none;
+    }
+    #abrir{
+        display: block;
+    }
+
+    .conteudo-inicial{
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .conteudo-inicial h1{
+        font-size: 24px;
+    }
+
+    .conteudo-inicial p{
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .dois-cadrastro{
+        gap: 40px;
+    }
+    /*--------------*/
+    .rodape-inicial{
+        height: 75px;
+    }
+
+    .rodape-inicial p{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 480px) { /*smartfone*/
+    .cabecalho-inicial img{
+        width: 160px;
+        height: 160px;
+        margin-top: -15px;
+        margin-left: -35px;
+    }
+
+    #fechar{
+        font-size: 1.9em;
+    }
+
+    .centro-lateral{
+        font-size: 24px;
+        height: calc(70vh - 20px);
+    }
+    /*---------------*/
+    .conteudo-inicial{
+        width: 97%;
+    }
+
+    .conteudo-inicial h1{
+        font-size: 20px;
+    }
+
+    .conteudo-inicial p{
+        font-size: 17px;
+        line-height: 20px;
+        text-align: justify;
+    }
+
+    .rodape-inicial{
+        height: 60px;
+    }
+
+    .rodape-inicial p{
+        width: 100%;
+        font-size: 15px;
+    }
+}
