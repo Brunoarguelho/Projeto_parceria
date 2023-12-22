@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevParceriaBrasil</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/style_Landing-page.css">
+    <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
@@ -16,13 +16,21 @@
     <main class="todo-conteudo">
      <div class="tela-cadastro">
         <div class="cabecalho-inicial">
-            <img src="imagens/logo01-sf.png" alt="DevParceria-Brasil"> <!--tamanho sera 250px-->
+            <img src="../../imagens/logo01-sf.png" alt="DevParceria-Brasil"> <!--tamanho sera 250px-->
             <div class="links-inicial">
-                <p><a href="index01.html" target="_parent" id="cadrastro-inicial">Cadastra-se</a></p>
-                <p><a href="index02.html" target="_parent">Informações</a></p>
-                <p><a href="index03.html" target="_parent">Contato</a></p>
-                <p><a href="index04.html" target="_parent">Entre</a></p>
-            </div>
+                <p><a href="../../cadastro/conteudo/cadastro.html"
+                     target="_parent" id="cadrastro-inicial">Cadastra-se</a>
+                </p>
+                <p><a href="../../informação/conteudo/informacao.html"
+                     target="_parent">Informações</a>
+                </p>
+                <p><a href="../../contato/conteudo/contato.html" 
+                     target="_parent">Contato</a>
+                </p>
+                <p><a href="../../entre/conteudo/entre.html"
+                     target="_parent">Entre</a>
+                </p>
+            </div> <!--links-inicial-->
         </div> <!--cabecalho-inicial -->
         <div class="conteudo-inicial">
             <h1>Bem-vindo ao DevParceriaBrasil!</h1>
@@ -31,27 +39,39 @@
                 Se você é um desenvolvedor procurando por sua primeira oportunidade ou uma empresa procurando por talentos em desenvolvimento, o DevParceriaBrasil é o lugar certo para você. Junte-se a nós hoje e faça parte da nossa missão de criar um futuro melhor para a indústria de tecnologia no Brasil.
             </p>
             <div class="dois-cadrastro">
-                <p><a href="index02.html">Parceiros</a></p>
-                <p><a href="index02.html">Desenvolvedor</a></p>
+                <p><a href="../../informação/conteudo/informacao.html"
+                     target="_parent">Parceiros</a>
+                </p>
+                <p><a href="../../informação/conteudo/informacao.html"
+                     target="_parent">Desenvolvedor</a>
+                </p>
             </div> <!--dois-cadrastro-->
         </div> <!--conteudo-inicial-->
         </div> <!--tela-cadastro-->
         <div class="rodape-inicial">
             <p>&copy; 2024 -<strong> DevParceria Brasil</strong> | Todos os direitos reservados</p>
-        </div>
+        </div> <!--rodape-inicial-->
     </main> <!--todo-conteudo-->
     <ion-icon name="menu-outline" id="abrir"></ion-icon>
     <div class="menu-lateral">
         <ion-icon name="close-outline" id="fechar"></ion-icon>
         <div class="centro-lateral">
-            <p><a href="#" id="cadrastro-inicial" class="conf-lateral">Cadastra-se</a></p>
-            <p><a href="index02.html" target="_parent" class="conf-lateral">Informações</a></p>
-            <p><a href="index03.html" target="_parent" class="conf-lateral">Contato</a></p>
-            <p><a href="index04.html" class="conf-lateral">Entre</a></p>
-        </div>
-    </div>
+            <p><a href="../../cadastro/conteudo/cadastro.html" id="cadrastro-inicial"
+                 target="_parent" class="conf-lateral">Cadastra-se</a>
+            </p>
+            <p><a href="../../informação/conteudo/informacao.html"
+                 target="_parent" class="conf-lateral">Informações</a>
+            </p>
+            <p><a href="../../contato/conteudo/contato.html"
+                 target="_parent" class="conf-lateral">Contato</a>
+            </p>
+            <p><a href="../../entre/conteudo/entre.html" 
+                target="_parent" class="conf-lateral">Entre</a>
+            </p>
+        </div> <!--centro-lateral-->
+    </div> <!--menu-lateral-->
 </body> <!--body-->
-<script src="parceria_brasil.js"></script>
+<script src="../javascript/Landing_page.js"></script>
 <script>
 </script>
 </html>

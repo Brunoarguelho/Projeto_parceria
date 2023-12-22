@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DPB / Cadastro</title>
-    <link rel="stylesheet" href="style01.css">
-    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/cadastro.css">
+    <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
 </head>
 <!-- 
    tela de cadastro
@@ -16,10 +16,10 @@
     </header>
     <main>
             <form id="registrationForm">
-                <input type="text" id="name" placeholder="Nome Completo" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="text" id="cpfCnpj" placeholder="CPF ou CNPJ" required>
-                <input type="password" id="password" placeholder="Crie sua Senha" required>
+                <input type="text" id="name" class="remove" placeholder="Nome Completo" required>
+                <input type="email" id="email" class="remove" placeholder="Email" required>
+                <input type="text" id="cpfCnpj" class="remove" placeholder="CPF ou CNPJ" required>
+                <input type="password" id="password" class="remove" placeholder="Crie sua Senha" required>
                 <small id="orientacao">
                     Sua senha deve ter pelo menos 8 caracteres, incluir uma letra maiúscula, uma letra minúscula, um número e um caractere especial (por exemplo, !@#$%^&*).
                 </small>
@@ -28,12 +28,13 @@
                     <option value="parceiro">Parceiro</option>
                     <option value="desenvolvedor">Desenvolvedor</option>
                 </select>
-                <button type="submit">Cadastrar</button>
+                <button type="submit" class="remove">Cadastrar</button>
             </form>
     </main>
-    <footer>
+    <footer class="footer">
         <p>&copy; 2024 -<strong> DevParceria Brasil</strong> | Todos os direitos reservados</p>
     </footer>
+       <p id="only-cell">&copy; 2024 -<strong> DevParceria Brasil</strong> | Todos os direitos reservados</p>
 </body>
-<script src="cadastros.js"></script>
+<script src="../javascript/cadastros.js"></script>
 </html>

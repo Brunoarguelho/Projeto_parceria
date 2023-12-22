@@ -9,7 +9,7 @@ function obterDataFormatada(data) {
 }
 
 // Criando uma data com os componentes específicos
-const dataAtual = new Date(2023, 11, 20); // O mês é zero-indexado (0 = janeiro, 11 = dezembro)
+const dataAtual = new Date(); // O mês é zero-indexado (0 = janeiro, 11 = dezembro)
 
 // Exibindo a data na div
 const divData = document.querySelector(".data");
