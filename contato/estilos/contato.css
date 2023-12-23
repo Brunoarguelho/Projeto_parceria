@@ -152,7 +152,7 @@ div.redes{
 
 div.redes .icon{
     font-size: 2.5em;
-    margin-top: 15px;
+    margin-top: 25px;
     color: black;
     cursor: pointer;
 }
@@ -172,7 +172,7 @@ div.redes .icon{
     border-radius: 6px;
     position: absolute;
     z-index: 1;
-    bottom: 100%; 
+    bottom: 80%; 
     left: 50%;
     margin-left: -60px;
     opacity: 0;
@@ -195,8 +195,6 @@ div.redes .icon{
     opacity: 1;
 }
 
-/*---------------------*/
-
 footer.rodape{
    width: 100%;
    height: auto;
@@ -205,3 +203,63 @@ footer.rodape{
    text-align: center;
 }
 
+/*---------media screnn---------*/
+
+@media screen and (max-width: 908px) { /*tablet maior ou medio*/
+    header.cabecalho{
+        font-size: 1.3em;
+    }
+
+    main{
+        width: 98%;
+    }
+
+    input{
+        min-width: 400px;
+    }  
+
+    #button{
+        min-width: 90px;
+    }
+
+    div.redes .icon{
+        font-size: 2.2em;
+        margin-top: 25px;
+    }
+
+    .tooltip .tooltiptext {
+        bottom: 80%; 
+    }
+
+    footer.rodape{
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (max-width: 490px) { /*smartphone*/
+    label{
+        font-size: 1.2em;
+    }
+
+    input{
+         min-width: 350px;
+    }
+
+    select{
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 320px) { /*smartphone menor*/
+    header.cabecalho{
+        font-size: 1.1em;
+    }
+
+    input{
+        min-width: 300px;
+    } 
+
+    #button{
+        min-width: 80px;
+    }
+}

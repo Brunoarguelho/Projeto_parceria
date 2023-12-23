@@ -15,7 +15,7 @@
    tela de entre
  -->
 <body>
-    <main>
+    <main class="todo-conteudo">
         <section class="logo">
             <h1>Depende de você!</h1>
             <p>Transformando Códigos em Oportunidades, Conectando Talentos ao Futuro.</p>
@@ -37,11 +37,8 @@
             <form action="" method="post">
                 <label for="email">Email</label><br>
                 <input type="text" id="email" name="email" required><br>
-                <span id="email-icon"><ion-icon name="mail-outline"></ion-icon></span>
                 <label for="text">Senha</label><br>
                 <input type="password" id="senha" name="senha" required><br>
-                <span id="senha-icon1"><ion-icon name="eye-off-outline"></ion-icon></span>
-                <span id="senha-icon2"><ion-icon name="eye-outline"></ion-icon></span>
                 <span id="senha-recupera"><a href="#">Esqueci minha senha</a></span><br>
                 <div class="recaptcha">
                     <p>captchar</p>
@@ -60,6 +57,19 @@
             </div>
         </section>
     </main>
+    <ion-icon name="menu-outline" id="abrir"></ion-icon>
+    <div class="overlay">
+        <div class="overlay-conteudo">
+            <ion-icon name="close-outline" id="fechar"></ion-icon>
+            <h3>Depende de você!</h3>
+            <p>Transformando Códigos em Oportunidades, Conectando Talentos ao Futuro.</p>
+            <div class="overlay-link">
+                <p><a href="#">Informações</a></p>
+                <p><a href="#">Contato</a></p>
+            </div>
+            <img src="../../imagens/logo-entre04.jpg" alt="DevParceriaBrasil">
+        </div>
+    </div>
 </body>
 <script src="../javascript/entre.js"></script>
 <script>

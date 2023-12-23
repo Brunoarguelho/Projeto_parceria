@@ -107,7 +107,6 @@ section.entre img{
     background: transparent no-repeat center;
     background-size: cover;
     margin-top: -50px;
-    /* margin-left: -50px; */
 }
 
 section.entre h2{
@@ -195,29 +194,6 @@ input{
     color: var(--Azul);
     font-family: var(--font3);
 }
-#email-icon{
-    position: absolute;
-    top: 41px;
-    right: 90px;
-    font-size: 1.5em;
-    color: var(--Cinza-Médio);
-}
-
-#senha-icon1{
-    position: absolute;
-    bottom: 162px;
-    right: 90px;
-    font-size: 1.5em;
-    color: var(--Cinza-Médio);
-}
-#senha-icon2{
-    position: absolute;
-    bottom: 60px;
-    right: 162px;
-    font-size: 1.5em;
-    color: var(--Cinza-Médio);
-    display: none;
-}
 
 .recaptcha{ /*retirar quando tiver meu dominio*/
     width: 60%;
@@ -292,7 +268,7 @@ input{
 .Acesse a:hover{
     filter: brightness(90%); 
 }
-
+/*-----------------------*/
 .simbolo{
     width: 20px;
     height: 20px;
@@ -306,4 +282,250 @@ input{
     font-weight: bold;
 }
 
+div.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transform: translate(-100%);
+    transition: all .5s ease;
+    background-color: #0010f1ef;
+}
+
+div.overlay h3{
+    font-size: 1.8em;
+    width: 100%;
+    color: var(--Branco);
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.overlay p{
+    font-size: 1.4em;
+    width: 100%;
+    color: var(--Branco);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+  
+}
+
+div.overlay-link{
+    margin-top: 30px;
+}
+
+div.overlay-link a{
+    text-decoration: none;
+    font-size: 1.4em;
+    color: var(--Branco);
+    width: 100%;
+    background-color: blue;
+    box-shadow: 1px 2px 10px #00000072;
+    border-radius: 5px;
+    padding: 12px 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+div.overlay-link a:hover{
+    filter: brightness(80%);
+    box-shadow: 1px 2px 10px #00000033;
+}
+
+div.overlay-conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div.overlay-conteudo img{
+    width: 99%;
+    height: 340px;
+    background: transparent no-repeat center;
+    box-shadow: 1px 2px 10px #000000ce;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.8;
+}
+
+#abrir{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 2.2em;
+    cursor: pointer;
+    display: none;
+    z-index: 9;
+    background-color: #0000fff5;
+    border-radius: 50%;
+    padding: 3px;
+    color: var(--Branco);
+}
+
+#fechar{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 2em;
+    color: var(--Branco);
+    font-weight: bold;
+    cursor: pointer;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    color: var(--Azul);
+}
+
 /*------------media screen------------*/
+
+@media screen and (min-width: 1200px) {
+    section.logo img{
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    section.logo h1{
+        font-size: 2.1em;
+        margin-bottom: 30px;
+        margin-top: -50px;
+    }
+
+    section.logo p{
+        width: 80%; 
+    }
+
+    section.logo img{
+        width: 450px;
+        height: 450px;
+        margin-top: 10px;
+    }
+
+    section.entre img{
+        width: 250px;
+        height: 250px;
+    }
+
+    section.entre h2{
+        font-size: 1.3em;
+        margin-top: -65px;
+    }
+
+    .link-cadastro{
+        width: 60%;
+    }
+
+    form{
+        width: 90%;
+    }
+
+    label{
+        left: 9%;
+    }
+
+    input{
+        width: 90%;
+    }
+
+    #enviar{
+        width: 80px;
+    }
+
+    .duvida{
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    section.logo{
+        width: 50%;
+    }
+
+    section.logo h1{
+        margin-bottom: 10px;
+        margin-top: -100px;
+    }
+
+    section.logo p{
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    section.logo img{
+        width: 350px;
+        height: 350px;
+        margin-top: 30px;
+    }
+
+    section.entre{
+        width: 50%;
+    }
+
+    section.entre img{
+        width: 300px;
+        height: 300px;
+        margin: -40px 0 0 0;
+    }
+
+    .link-cadastro{
+        width: 90%;
+    }
+
+    .linhacurta{
+        padding: 10px 0;
+    }
+
+    form{
+        width: 95%;
+    }
+
+    label{
+        left: 5%;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    .duvida{
+        padding: 100px 0;
+    }
+}
+
+@media screen and (max-width: 490px) {
+     main{
+        display: inline-block;
+        position: relative;
+    }
+
+     section.logo{
+        display: none;
+    }
+
+     section.entre{
+        width: 100%;
+        z-index: 2;
+    }
+
+    section.entre img{
+        margin-top: -80px;
+    }
+
+    #enviar{
+        margin-top: 15px;
+    }
+
+    .duvida{
+        padding: 5px 0 0 0;
+    }
+
+    #abrir{
+        display: block;
+    }
+}

@@ -14,3 +14,22 @@ const dataAtual = new Date(); // O mês é zero-indexado (0 = janeiro, 11 = deze
 // Exibindo a data na div
 const divData = document.querySelector(".data");
 divData.textContent = obterDataFormatada(dataAtual);
+
+//------------------------------
+
+document.getElementById('abrir').addEventListener('click', function() {
+    document.querySelector('.overlay').style.transform = 'translateX(0)';
+    document.querySelector('.todo-conteudo').style.filter = 'blur(20px)';
+});
+
+document.getElementById('fechar').addEventListener('click', function() {
+    document.querySelector('.overlay').style.transform = 'translateX(-100%)';
+    document.querySelector('.todo-conteudo').style.filter = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target.closest('.overlay') === null && event.target.id !== 'abrir') {
+        document.querySelector('.overlay').style.transform = 'translateX(-100%)';
+        document.querySelector('.todo-conteudo').style.filter = 'none';
+    }
+});
