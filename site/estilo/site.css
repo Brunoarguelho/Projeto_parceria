@@ -48,13 +48,12 @@ header{
 }
 
 header h1{
-    width: 100%;
+    width: 30%;
     text-align: center;
     font-size: 1.8em;
     padding: 12px 0;
-    color: var(--Bege);
-    background-color: var(--Preto-claro);
-    border-radius: 0 0 20px 20px;
+    color: var(--Branco);
+    text-shadow: 1px 2px 1px black;
     position: absolute;
     top: 0;
     left: 50%;
@@ -62,26 +61,51 @@ header h1{
     z-index: 9;
 }
 
+abbr{ /*abbr geral*/
+    cursor: help;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: .7rem;
+    transition: all .1s;
+}
+
 div.logo{
     width: 100%;
     height: 250px;
 }
 
-div.logo img{
+.automatico{
+    display: flex;
+    overflow: hidden;
     width: 100%;
-    height: 250px;  
-    object-fit: cover;
-    background-position: center;
+    height: 100%;
+}
+
+.carocel{
+    flex: 0 0 100%;
+    max-width: 100%;
+    background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 60px;
     margin: 0 auto;
+}
+
+div.carocel-color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color:var(--Bege);
+    border: none;
+    outline: none;
 }
 
 .aside-nav{
     width: 100%;
     padding: 24px;
-    background-color: var(--Preto-claro);
+    background-color: #0000ffd8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,22 +123,27 @@ div.logo img{
 
 #fechar-menu{
     position: absolute;
-    top: 2.8%;
-    left: 10px;
+    top: 3%;
+    left: 5px;
     transform: translateY(-50%);
-    font-size: 1.8em;
+    font-size: 1.5em;
+    font-weight: bold;
     cursor: pointer;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    color: blue;
 }
 
 .menu-lateral{
     position: fixed;
     top: 34%;
     left: 0;
-    width: 30%;
+    width: 40%;
     height: 100vh;
     overflow: hidden;
-    visibility: hidden;
-    background-color: var(--Preto-claro);
+    transform: translateX(-100%);
+    transition: all .4s ease;
+    background-color: #0000ffcc;
     z-index: 100;
 }
 
@@ -125,7 +154,7 @@ div.logo img{
     flex-direction: column;
     gap: 20px;
     font-size: 1.3em;
-    margin: 50px auto 0 auto;
+    margin: 51px auto 0 auto;
 }
 
 .menu-lateral-item p,a{
@@ -135,8 +164,10 @@ div.logo img{
 
 .menu-lateral-item a:hover{
     background-color: var(--Cinza-Claro);
-    padding: 5px 200px;
-    color: var(--Preto);
+    padding: 10px 200px;
+    filter: brightness(90%);
+    color: var(--Preto-claro);
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
+    font-weight: bold;
 }
