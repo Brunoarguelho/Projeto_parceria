@@ -105,11 +105,13 @@ div.carocel-color{
 .aside-nav{
     width: 100%;
     padding: 24px;
-    background-color: #0000ffd8;
+    background-color: #000084;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: sticky;
+    z-index: 100;
+    top: -1.5px;
 }
 
 #abrir-menu{
@@ -136,14 +138,14 @@ div.carocel-color{
 
 .menu-lateral{
     position: fixed;
-    top: 34%;
+    top: 33.6%;
     left: 0;
     width: 40%;
     height: 100vh;
     overflow: hidden;
     transform: translateX(-100%);
-    transition: all .4s ease;
-    background-color: #0000ffcc;
+    transition: all .3s ease;
+    background-color: #000084;
     z-index: 100;
 }
 
@@ -156,18 +158,52 @@ div.carocel-color{
     font-size: 1.3em;
     margin: 51px auto 0 auto;
 }
-
-.menu-lateral-item p,a{
-    color: white;
-    text-decoration: none;
+.menu-lateral {
+    position: fixed;
+    top: 33.6%;
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    overflow: hidden;
+    transform: translateX(-100%);
+    transition: all .4s ease;
+    z-index: 100;
 }
 
-.menu-lateral-item a:hover{
-    background-color: var(--Cinza-Claro);
-    padding: 10px 200px;
-    filter: brightness(90%);
-    color: var(--Preto-claro);
-    border-radius: 5px;
-    transition: all 0.2s ease-in-out;
-    font-weight: bold;
+.grade-menu{
+    position: relative;
+    width: 100%;
+    text-indent: 8px;
+    height: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-top: 10px;
+}
+
+.item{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-family: var(--font2);
+    margin: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.item:hover{
+    color: gold;
+}
+
+.imagem-topo .mostrar {
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.ocultar{
+    display: none;
 }
