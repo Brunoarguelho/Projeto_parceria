@@ -35,11 +35,15 @@ window.addEventListener('click', function(event) {
 window.onscroll = function() {
     var menuLateral = document.querySelector('.menu-lateral');
     var imagemTopo = document.querySelector('.imagem-topo');
+    var asidenav = document.querySelector('.aside-nav');
     if (window.scrollY > 250) { // Ajuste este valor para quando você quer que o menu lateral se mova para o topo
         menuLateral.style.top = "0";
+        asidenav.style.position = "fixed"; //rolar alem de 250 era ficar fixo no top
         imagemTopo.classList.remove('ocultar'); // Mostra a imagem
     } else {
         menuLateral.style.top = "33.6%";
+        asidenav.style.position = "sticky"; // rolar menes que 250px voltara posição original
         imagemTopo.classList.add('ocultar'); // Esconde a imagem
     }
 };
+/*----------------------------------*/
