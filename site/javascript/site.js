@@ -1,7 +1,7 @@
 
 document.getElementById('abrir-menu').addEventListener('click', function() {
     document.querySelector('.menu-lateral').style.transform = 'translateX(0)';
-    document.querySelector('.container').style.filter = 'blur(15px)';
+    document.querySelector('.container').style.filter = 'blur(20px)';
      // Desabilita a rolagem do mouse
      //abre menu lateral
     document.body.style.overflow = 'hidden';
@@ -52,103 +52,103 @@ const allStories = [
     {
         thumUrl: "../imagens/1-stories.jpg",
         imageUrl: "../imagens/1.jpg",
-        title: "Title No. 1",
+        title: "Perfil No. 1",
     },
 
     {
         thumUrl: "../imagens/2-stories.jpg",
         imageUrl: "../imagens/2.jpg",
-        title: "Title No. 2",
+        title: "Perfil No. 2",
     },
 
     {
         thumUrl: "../imagens/3-stories.jpg",
         imageUrl: "../imagens/3.jpg",
-        title: "Title No. 3",
+        title: "Perfil No. 3",
     },
 
     {
         thumUrl: "../imagens/4-stories.jpg",
         imageUrl: "../imagens/4.jpg",
-        title: "Title No. 4",
+        title: "Perfil No. 4",
     },
 
     {
         thumUrl: "../imagens/5-stories.jpg",
         imageUrl: "../imagens/5.jpg",
-        title: "Title No. 5",
+        title: "Perfil No. 5",
     },
 
     {
         thumUrl: "../imagens/6-stories.jpg",
         imageUrl: "../imagens/6.jpg",
-        title: "Title No. 6",
+        title: "Perfil No. 6",
     },
 
     {
         thumUrl: "../imagens/7-stories.jpg",
         imageUrl: "../imagens/7.jpg",
-        title: "Title No. 7",
+        title: "Perfil No. 7",
     },
 
     {
         thumUrl: "../imagens/8-stories.jpg",
         imageUrl: "../imagens/8.jpg",
-        title: "Title No. 8",
+        title: "Perfil No. 8",
     },
 
     {
         thumUrl: "../imagens/9-stories.jpg",
         imageUrl: "../imagens/9.jpg",
-        title: "Title No. 9",
+        title: "Perfil No. 9",
     },
 
     {
         thumUrl: "../imagens/10-stories.jpg",
         imageUrl: "../imagens/10.jpg",
-        title: "Title No. 10",
+        title: "Perfil No. 10",
     },
 
     {
         thumUrl: "../imagens/11-stories.jpg",
         imageUrl: "../imagens/11.jpg",
-        title: "Title No. 11",
+        title: "Perfil No. 11",
     },
 
     {
         thumUrl: "../imagens/12-stories.jpg",
         imageUrl: "../imagens/12.jpg",
-        title: "Title No. 12",
+        title: "Perfil No. 12",
     },
 
     {
         thumUrl: "../imagens/13-stories.jpg",
         imageUrl: "../imagens/13.jpg",
-        title: "Title No. 13",
+        title: "Perfil No. 13",
     },
 
     {
         thumUrl: "../imagens/14-stories.jpg",
         imageUrl: "../imagens/14.jpg",
-        title: "Title No. 14",
+        title: "Perfil No. 14",
     },
 
     {
         thumUrl: "../imagens/15-stories.jpg",
         imageUrl: "../imagens/15.jpg",
-        title: "Title No. 15",
+        title: "Perfil No. 15",
     },
 
     {
         thumUrl: "../imagens/16-stories.jpg",
         imageUrl: "../imagens/16.jpg",
-        title: "Title No. 16",
+        title: "Perfil No. 16",
     },
 
     {
         thumUrl: "../imagens/17-stories.jpg",
         imageUrl: "../imagens/17.jpg",
-        title: "Title No. 17",
+        title: "Perfil No. 17",
     },
 ];
 
@@ -222,3 +222,4 @@ rightArrow.addEventListener("click", () => {
        }
     }
  });
+/*---------------*/

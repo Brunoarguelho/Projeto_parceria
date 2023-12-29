@@ -8,8 +8,20 @@
     <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+    <script>
+        $(window).on('load', function() {
+        $('.overlay-carregamento').fadeOut('slow');
+     });
+    </script> <!--carrega tela de carregamento-->
 <body>
+    <div class="overlay-carregamento">
+       <div class="ring">
+           
+       </div>
+       <p id="fixed-carregando">Carregando</p>
+    </div> <!--overlay-carregamento-->
     <header class="cabecalho">
         <div class="logo"> 
              <div class="automatico">
@@ -50,79 +62,16 @@
     </aside> <!--aside-nav-->
     <main class="container">
         <img src="../../imagens/logo01-sf.png" id="logo-story" alt="DevParceriaBrasil">
-        <h2 id="titulo-story">Stories <ion-icon name="bookmarks-outline" id="logo-story-icon"></ion-icon></h2>
+        <div class="perfil-pessoal">
+         <div class="perfil-pessoal-item">
+            <ion-icon name="duplicate-outline" class="perfil-pessoal-item-mover" id="postar-icon"></ion-icon>
+            <span class="perfil-pessoal-item-mover" id="postar-texto">Postar</span>
+         </div> <!--perfil-pessoal-item-->
+        </div> <!--perfil-pessoal-->
         <section class="stories-container">
-             <!-- <div class="content">
-                 <img src="../imagens/1-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                  <img src="../imagens/2-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                  <img src="../imagens/3-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                  <img src="../imagens/4-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                  <img src="../imagens/5-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                  <img src="../imagens/6-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                  <img src="../imagens/7-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                  <img src="../imagens/8-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                  <img src="../imagens/9-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                  <img src="../imagens/10-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                <img src="../imagens/11-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                <img src="../imagens/12-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                <img src="../imagens/13-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                <img src="../imagens/14-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                <img src="../imagens/15-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-            
-             <div class="content">
-                <img src="../imagens/16-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>
-
-             <div class="content">
-                <img src="../imagens/17-stories.jpg" id="story-img" alt="story-pessoal">
-             </div>   -->
-   
              <div class="story-full">
                 <div class="content">
-                    <div class="close-btn">
+                    <div class="close-btn"> <!--icon fechar-->
                         <svg xmlns="http://www.w3.org/2000/svg" 
                         fill="none" 
                         viewBox="0 0 24 24" 
@@ -133,7 +82,7 @@
                         stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>  
                     </div>
-                    <div class="left-arrow">
+                    <div class="left-arrow"> <!--icon seta esquerda-->
                         <svg xmlns="http://www.w3.org/2000/svg"
                          fill="none" 
                          viewBox="0 0 24 24" 
@@ -148,7 +97,7 @@
 
                     <img src="../../imagens/logo-entre04.jpg" id="full-img" alt="story-pessoal">
                      <!--atenção! não tira o id -->
-                    <div class="right-arrow">
+                    <div class="right-arrow"> <!--icon seta direita-->
                         <svg xmlns="http://www.w3.org/2000/svg" 
                         fill="none" 
                         viewBox="0 0 24 24" 
@@ -160,22 +109,33 @@
                         d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>     
                     </div>
-
                     <div class="title" style="color: #000;">Test Title</div>
                 </div> <!--content-->
              </div> <!--story-full-->
         </section> <!--stories-container-->
+
         <section class="conteudo-todo">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat esse omnis voluptatem temporibus, voluptatibus exercitationem quos pariatur assumenda illo ex earum recusandae doloribus quidem officia optio, alias ipsa voluptatum consequuntur?
-            Aperiam at nam repellat odit vel nesciunt quidem minima a omnis! Fugiat harum corrupti officia, vero vel amet voluptatum ex, beatae facilis voluptatibus voluptate vitae nostrum quibusdam nesciunt molestiae officiis.
-            Aspernatur dolore natus iste vero in maiores modi laudantium nemo, facere distinctio voluptate rerum ex adipisci est dolor quia neque ratione nam voluptas totam aliquid at officiis quod. Saepe, nihil.
-            Quas amet commodi rerum sint ducimus quidem deserunt laboriosam eligendi, facere, veniam quasi iusto aliquid saepe tenetur expedita ab, quisquam corrupti vero nisi sapiente repudiandae adipisci. Et asperiores minus velit.
-            Doloribus aliquid eius repellendus voluptatibus molestias rerum sint debitis corrupti quaerat dolorum veniam laudantium, maxime eveniet amet commodi assumenda dolor laborum a maiores iusto quia cum. Deleniti magnam odit magni!
-            Quos commodi ratione unde assumenda laudantium ab libero sunt hic necessitatibus, quaerat consequatur, quam, distinctio optio inventore nobis autem nemo aliquid fuga et quibusdam nulla magni! Nisi repudiandae laboriosam adipisci.
-            Eveniet numquam delectus vitae dolorem labore impedit doloremque alias velit quas totam consequuntur sint rerum corrupti ut repellendus quam, earum minima nostrum est nihil! Doloremque ducimus quibusdam architecto possimus voluptatibus.
-            Adipisci vero quas praesentium qui! Magni quia commodi pariatur atque fugit illo adipisci, ut laboriosam dolorum eaque quos, alias optio! Neque dolorum maxime unde ducimus quo saepe repellat accusamus sit!
-            Illo quaerat quae numquam, sequi ipsam nostrum officiis quisquam harum obcaecati alias accusantium commodi aut temporibus aperiam? Ut saepe in tempora repudiandae nemo alias. Doloremque sit ipsum voluptates quibusdam corporis?
-            Vitae officia delectus dolor architecto totam, neque repellat explicabo quam voluptatem alias temporibus autem quos nisi obcaecati aperiam veritatis maxime eveniet magnam tempora odit molestiae. Asperiores placeat praesentium totam commodi.
+          <div class="post-perfil">
+            <div class="diga">
+                <img src="../../imagens/logo-entre03.jpg" alt="foto pessoal">
+                <input type="text" name="conquistas" id="conquista"
+                placeholder="Qual foi sua Conquista, Nome?"> <br><hr>
+                <div class="tipo-post">
+                    <div class="post-Video-aovivo">
+                        <ion-icon name="videocam-outline"></ion-icon>
+                        <p> Vídeo ao Vivo</p>
+                    </div>
+                    <div class="post-img">
+                        <ion-icon name="images-outline"></ion-icon>
+                        <p>Foto/Vídeo</p>
+                    </div>
+                    <div class="sentimento">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <p>Atividade</p>
+                    </div>
+                </div> <!--tipo-post-->
+            </div>
+          </div>
         </section>
     </main> <!--container-->
 

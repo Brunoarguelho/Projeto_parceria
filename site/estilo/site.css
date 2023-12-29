@@ -39,8 +39,91 @@ body,html{
     color: var(--Branco);
     background-color:var(--Branco);
     min-height: 100vh;
-    overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* pode ser transparent também */
 }
+
+p,a,div,img,span,strong{ /*texte tira se der bug*/
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.overlay-carregamento{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Azul);
+}
+
+.ring{
+    animation: carregando 2s linear infinite;
+    border: 5px solid var(--Branco);
+    border-right-color: transparent;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+}
+
+#fixed-carregando{
+    font-size: 1.5em;
+    margin-left: 10px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    animation: sombra 1s infinite;
+}
+
+#fixed-carregando::after {
+    content: '...';
+    display: inline-block;
+    animation: pontos 4s infinite;
+}
+
+@keyframes pontos {
+    0%, 4% { 
+        transform: scaleX(.8); 
+    }
+    6%, 10% { 
+        transform: scaleX(1); 
+    }
+    12%, 16% { 
+        transform: scaleX(.8); 
+    }
+    18%, 22% { 
+        transform: scaleX(1); 
+    }
+    100% { 
+        transform: scaleX(.8); 
+    }
+}
+
+@keyframes sombra {
+    0% { 
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    }
+    100% { 
+        text-shadow: -2px -2px 2px rgba(0,0,0,0.3); 
+    }
+}
+
+@keyframes carregando {
+    0% { 
+        transform: rotate(0deg);
+    }
+    35%, 40%, 50% {
+        transform: rotate(0deg) ;
+        animation-timing-function: ease-out;
+    }
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
+
+/*--------------*/
 
 header{
     width: 100%;
@@ -101,7 +184,7 @@ div.logo{
     justify-content: center;
     align-items: center;
     position: sticky;
-    top: -1.5px;
+    top: -2px;
     z-index: 99;
 }
 
@@ -200,20 +283,117 @@ main.container{
     width: 250px;
     height: 250px;
     position: absolute;
-    top: -42px;
-    left: 20px;
+    top: -43px;
+    left: -30px;
 }
 
-.container #titulo-story{
-    position: absolute;
-    top: 11%;
-    left: 20%;
-    color: rgba(0, 0, 255, 0.26);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 36px;
+.perfil-pessoal{
+   position: absolute;
+   top: 8px;
+   left: 320px;
+   width: 130px;
+   height: 130px;
+   box-shadow: 0 0 0 10px transparent;
+   animation: rotate 20s 1ms infinite linear;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   background: blue url(../imagens/5.jpg) no-repeat  center;
+   background-size: cover;
+   z-index: 0;
+   cursor: pointer;
 }
-.container #logo-story-icon{
-    color: #8888ffe1;
+
+@keyframes rotate {
+    /* muda a cor e a posição da borda falsa a cada 25% da animação */
+    0% {
+      box-shadow: 0 0 0 2px #ff0000ac;
+    }
+    25% {
+      box-shadow: 0 0 0 2px #008000aa;
+    }
+    50%, 75% {
+      box-shadow: 0 0 0 2px blue;
+      box-shadow: 0 0 0 2px violet;
+    }
+    100% {
+      box-shadow: 0 0 0 2px #ff0000ac;
+    }
+}
+
+.perfil-pessoal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: blue url(../imagens/5.jpg) no-repeat  center;
+    background-size: cover;
+    clip: rect(0, 130px, 130px, 0); /* recorta a imagem no tamanho do elemento */
+    z-index: -1; /* coloca a imagem atrás do conteúdo */
+ }
+
+.perfil-pessoal:hover::before{
+    filter: brightness(80%);
+}
+
+.perfil-pessoal-item{
+   color: #000001;
+   width: 100%;
+   height: 40px;
+   background-color: var(--Branco);
+   position: absolute;
+   bottom: 0;
+   text-align: center;
+   box-shadow: 1px 0 1px #0000ff9d;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   font-weight: bold;
+   font-size: 1.2em;
+   z-index: 9;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.perfil-pessoal-item::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: inherit;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: -15px;
+    z-index: -1;
+}
+
+.perfil-pessoal-item-mover{
+    position: absolute;
+    top: -10px;
+    color: var(--Azul);
+    z-index: 9;
+    font-weight: bold;
+}
+
+#postar-icon{
+    cursor: pointer;
+    position: absolute;
+    top: -12px;
+    left: 50.5%;
+    transform: translateX(-50%);
+}
+
+#postar-texto{
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 50.5%;
+    transform: translateX(-50%);
 }
 
 /*-----------------*/
@@ -229,10 +409,11 @@ main.container{
     overflow-x: scroll;
     position: relative;
     top: 3px;
-    left: 34%;
+    left: 33.5%; /*se aumentar dará barra lateral*/
     width: 1011px;
     height: 145px;
     box-shadow: 0 3px 24px -8px rgba(0, 0, 0, 0.081);
+    box-sizing: border-box;
 }
 
 .content{
@@ -241,7 +422,7 @@ main.container{
 }
 
 ::-webkit-scrollbar {
-    width: 100px;
+    width: 8px;
     height: 8px;
 }
 
@@ -360,6 +541,7 @@ main.container{
     height: 90%;
     box-shadow: inset 0 0 100px rgba(127, 127, 127, 0.5), inset 00 50px rgba(127, 127, 127, 0.15);
     border-radius: 5px;
+    cursor: auto;
 }
 
 .story-full .content .title{
@@ -369,12 +551,13 @@ main.container{
     transform: translateX(-50%);
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--Branco);
+    background-color: #f5f5f5bc;
     line-height: 2;
     padding: 8px 32px;
     z-index: 9;
-    border-radius: 2px;
-    border: 1px solid var(--Cinza-Claro);
+    border-radius: 3px;
+    outline: 0;
+    box-shadow: 1px 2px 3px #00000053;
 }
 
 /*------------------------*/
