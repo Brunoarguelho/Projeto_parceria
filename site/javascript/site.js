@@ -152,11 +152,13 @@ const allStories = [
     },
 ];
 
-  const storiesContainer = document.querySelector(".stories-container");
-  const storyFull = document.querySelector(".story-full");
+  const storiesContainer = document.querySelector(".stories-container"); // pai story-full
+  const storyFull = document.querySelector(".story-full"); // todo conteudo
   const storyFullimage = document.querySelector(".story-full img"); //img
-  const storyFullTitle = document.querySelector(".story-full .title");
-  const Closebtn = document.querySelector(".story-full .close-btn");
+  const storyFullTitle = document.querySelector(".story-full .title"); // titulo
+  const Closebtn = document.querySelector(".story-full .close-btn"); //fechar
+  const leftArrow = document.querySelector(".story-full .left-arrow"); // esquerda
+  const rightArrow = document.querySelector(".story-full .right-arrow"); // direita
 
   let currentIndex = 0;
 
@@ -184,7 +186,39 @@ const allStories = [
         }
      });
   });
-
+  //ação de quando clicar vai ativar o pseudo active.
   Closebtn.addEventListener("click", () =>{
     storyFull.classList.remove("active");
   });
+/*------------*/
+  leftArrow.addEventListener("click", () => {
+     if(currentIndex > 0) {
+        currentIndex -= 1;
+        //ativação da seta da esquerda quando clicar nela
+        storyFullimage.setAttribute("src", allStories [currentIndex].imageUrl); 
+        
+        if (!allStories[currentIndex].title) {
+            storyFullTitle.style.display = "none";
+        }
+        else{
+            storyFullTitle.style.display = "block";
+            storyFullTitle.innerHTML = allStories[currentIndex].title;
+        }
+     }
+  });
+/*------------*/
+rightArrow.addEventListener("click", () => {
+    if(currentIndex < allStories.length - 1) {
+       currentIndex += 1;
+       //ativação da seta da direita quando clicar nela
+       storyFullimage.setAttribute("src", allStories [currentIndex].imageUrl); 
+       
+       if (!allStories[currentIndex].title) {
+           storyFullTitle.style.display = "none";
+       }
+       else{
+           storyFullTitle.style.display = "block";
+           storyFullTitle.innerHTML = allStories[currentIndex].title;
+       }
+    }
+ });
