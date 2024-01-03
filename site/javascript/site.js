@@ -223,3 +223,10 @@ rightArrow.addEventListener("click", () => {
     }
  });
 /*---------------*/
+// var heartIncompleto = document.getElementById('heart-incompleto');
+// var heartCompleto = document.getElementById('heart-completo');
+
+// heartIncompleto.addEventListener('click', function() {
+//     heartIncompleto.style.display = 'none';
+//     heartCompleto.style.display = 'inline';
+// });

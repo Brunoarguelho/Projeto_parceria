@@ -137,12 +137,34 @@
                     <p>Atividade</p>
                 </div>
             </div> <!--tipo-post-->
-        </section>
+        </section> <!--barra-postagem-->
+        <section class="geral-post">
+             <div class="container-geral-post">
+                 <div class="img-post-geral">
+                    <span id="nome-post">Nome</span>
+                    <span><ion-icon name="person-add-outline" class="adicionar" id="add-amigo" title="Add Amigo"></ion-icon></span>
+                    <span><ion-icon name="person-outline" class="adicionar" id="amigo" title="Amigo">
+                    </ion-icon></span>
+                 </div> <!--img-post-geral-->
+                 <div class="text-conteudo">
+                      <textarea name="texto-escrito" id="texto-escrito" cols="30"></textarea>
+                      <div class="img-video-post">
+                         <div class="area-img-video-post"><span>+</span></div>
+                      </div>
+                 </div> <!--text-conteudo-->
+                 <div class="interacao-emoji" id="emojiDiv">
+                    <div class="interacao-emoji-esquerda">
+                        <span id="heart-incompleto"><ion-icon name="heart-outline"></ion-icon></span>
+                        <span id="heart-completo"><ion-icon name="heart"></ion-icon></span>
+                    </div>
+                    <div class="interacao-emoji-direita">
+                        <span id="salva"><ion-icon name="share-outline"></ion-icon></span>
+                        <span id="compartilhar"><ion-icon name="arrow-undo-outline"></ion-icon></span>
+                    </div>
+                 </div>    
+             </div> <!--container-geral-post-->
+        </section> <!--geral-post-->
     </main> <!--container-->
-
-    <footer class="rodape">
-
-    </footer> 
 </body>
 <script src="../javascript/site.js"></script>
 </html>
