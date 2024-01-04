@@ -147,21 +147,30 @@
                     </ion-icon></span>
                  </div> <!--img-post-geral-->
                  <div class="text-conteudo">
-                      <textarea name="texto-escrito" id="texto-escrito" cols="30"></textarea>
+                      <textarea name="texto-escrito" id="texto-escrito" cols="30" placeholder="Comente sua Conquista..."></textarea>
                       <div class="img-video-post">
-                         <div class="area-img-video-post"><span>+</span></div>
-                      </div>
+                         <div class="area-img-video-post"><span>+</span>
+                            <span id="area-de-click">Clique Aqui</span>
+                         </div>
+                      </div> <!--img-video-post-->
+                     <div class="contagem-post">
+                        <p class="contagem-post-esquerdo" id="contagem-curtida">Curtidas</p>
+                        <p class="contagem-post-esquerdo" id="contagem-comentario">Comentários</p>
+                        <p class="contagem-post-direito" id="contagem-compartilhar">Compartilhar</p>
+                     </div>
+                     <hr>
                  </div> <!--text-conteudo-->
                  <div class="interacao-emoji" id="emojiDiv">
                     <div class="interacao-emoji-esquerda">
-                        <span id="heart-incompleto"><ion-icon name="heart-outline"></ion-icon></span>
-                        <span id="heart-completo"><ion-icon name="heart"></ion-icon></span>
+                        <span id="heart-incompleto" title="Curti"><ion-icon name="heart-outline"></ion-icon></span>
+                        <span id="heart-completo" title="Visto"><ion-icon name="heart"></ion-icon></span>
+                        <span id="comentarios" title="comentar"><ion-icon name="chatbox-ellipses-outline"></ion-icon></span>
                     </div>
                     <div class="interacao-emoji-direita">
-                        <span id="salva"><ion-icon name="share-outline"></ion-icon></span>
-                        <span id="compartilhar"><ion-icon name="arrow-undo-outline"></ion-icon></span>
+                        <span id="salva" title="salvar"><ion-icon name="share-outline"></ion-icon></span>
+                        <span id="compartilhar" title="compartilhar"><ion-icon name="arrow-undo-outline"></ion-icon></span>
                     </div>
-                 </div>    
+                 </div> <!--interacao-emoji-->
              </div> <!--container-geral-post-->
         </section> <!--geral-post-->
     </main> <!--container-->
